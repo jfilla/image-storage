@@ -351,7 +351,7 @@ class ImageStorage
 					mkdir($dirName, 0777, true);
 				}
 				if (!file_exists($dirName) || !is_writable($new_path)) {
-					throw new ImageStorageException('Could not create default no_image.png. ' . $dirname . ' does not exist or is not writable.');
+					throw new ImageStorageException('Could not create default no_image.png. ' . $dirName . ' does not exist or is not writable.');
 				}
 
 				$data = base64_decode(require __DIR__ . '/NoImageSource.php');
